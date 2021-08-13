@@ -2,47 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/ColorPrimary"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="@dimen/_20sdp">
-
+    <ImageView
+        android:id="@+id/ivBtnBack"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_gravity="start"
+        app:tint="@color/ColorWhite" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Username"
-        android:textColor="@color/ColorWhite"
-        android:textSize="@dimen/_15sdp" />
-
-    <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/white"
-        android:maxLines="1"
-        android:textColor="@color/ColorWhite"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:text="Password"
-        android:textColor="@color/ColorWhite"
-        android:textSize="@dimen/_15sdp" />
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/white"
-        android:inputType="textPassword"
-        android:textColor="@color/ColorWhite"
-        android:maxLines="1" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nama"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Nama Produk"
         android:textColor="@color/ColorWhite"
         android:textSize="@dimen/_15sdp" />
 
@@ -52,32 +31,79 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/white"
         android:maxLines="1"
-        android:textColor="@color/ColorWhite" />
+        android:textColor="@color/ColorWhite"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
-        android:text="Email Address"
+        android:text="Deskripsi"
         android:textColor="@color/ColorWhite"
         android:textSize="@dimen/_15sdp" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etDeskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:textColor="@color/ColorWhite"
+        android:backgroundTint="@android:color/white"
+        android:gravity="top"
+        android:maxLines="10" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipe Produk"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/_15sdp" />
+
+    <Spinner
+        android:id="@+id/spTipe"
+        android:entries="@array/TipeProduk"
+        android:textColor="@color/ColorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Harga Produk"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/_15sdp" />
+
+    <EditText
+        android:id="@+id/etHarga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/white"
-        android:inputType="textEmailAddress"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textColor="@color/ColorWhite"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Foto Produk"
+        android:textColor="@color/ColorWhite"
+        android:textSize="@dimen/_15sdp" />
+
+    <EditText
+        android:id="@+id/etFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
         android:maxLines="1"
         android:textColor="@color/ColorWhite"/>
 
     <Button
-        android:id="@+id/btnNext"
+        android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_35sdp"
         android:layout_marginTop="@dimen/_50sdp"
         android:background="@drawable/btn_red"
-        android:text="Lanjutkan"
+        android:text="Tambahkan"
         android:textAllCaps="false"
         android:textColor="@color/ColorWhite"
         android:textSize="@dimen/_15sdp" />

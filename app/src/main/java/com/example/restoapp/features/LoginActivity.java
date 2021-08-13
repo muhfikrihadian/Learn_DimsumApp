@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.restoapp.R;
+import com.example.restoapp.features.admin.LoginAdminActvitiy;
 import com.example.restoapp.features.home.HomeActivity;
 
 import butterknife.BindView;
@@ -23,6 +25,8 @@ public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     @BindView(R.id.btnRegister)
     Button btnRegister;
+    @BindView(R.id.btnAdmin)
+    TextView btnAdmin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -42,6 +47,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, LoginAdminActvitiy.class);
                 startActivity(intent);
             }
         });

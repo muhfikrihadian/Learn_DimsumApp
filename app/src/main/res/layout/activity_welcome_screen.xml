@@ -38,7 +38,8 @@
             android:text="Get Started"
             android:textAllCaps="false"
             android:fontFamily="@font/bookman"
-            android:textSize="@dimen/_15sdp" />
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/ColorWhite"/>
 
     </RelativeLayout>
 </LinearLayout>

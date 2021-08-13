@@ -82,7 +82,7 @@ public class DetailProductActivity extends AppCompatActivity {
             btnOder.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ModelOrder modelOrder = new ModelOrder(data.getNama(), data.getHarga(), qty, harga, data.getFoto());
+                    ModelOrder modelOrder = new ModelOrder("", data.getNama(), data.getHarga(), qty, harga, data.getFoto());
                     Intent intent = new Intent(DetailProductActivity.this, CheckoutActivity.class);
                     intent.putExtra("DataOrder", new Gson().toJson(modelOrder));
                     startActivity(intent);

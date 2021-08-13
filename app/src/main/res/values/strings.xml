@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Resto App</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Juragan Dimsum</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="LoginAdmin"><u>Masuk Sebagai Admin</u></string>
+    <string name="LoginUser"><u>Masuk Sebagai User</u></string>
+    <string-array name="TipeProduk">
+        <item>Makanan</item>
+        <item>Minuman</item>
+    </string-array>
 </resources>

@@ -70,22 +70,12 @@
         android:textColor="@color/ColorWhite"
         android:textSize="@dimen/_15sdp" />
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:background="@drawable/btn_purple"
-        android:text="Daftar Akun Baru"
-        android:textAllCaps="false"
-        android:textColor="@color/ColorWhite"
-        android:textSize="@dimen/_15sdp" />
     <TextView
-        android:id="@+id/btnAdmin"
+        android:id="@+id/btnUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_20sdp"
-        android:text="@string/LoginAdmin"
+        android:text="@string/LoginUser"
         android:textColor="@color/ColorWhite"
         android:textSize="@dimen/_15sdp"
         android:textAlignment="center"/>

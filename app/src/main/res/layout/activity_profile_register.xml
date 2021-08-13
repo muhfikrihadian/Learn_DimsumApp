@@ -53,7 +53,7 @@
         android:background="@drawable/btn_red"
         android:text="Lanjut"
         android:textAllCaps="false"
-        android:textColor="@color/ColorPrimary"
+        android:textColor="@color/ColorWhite"
         android:textSize="@dimen/_15sdp" />
 
     <Button
@@ -64,6 +64,6 @@
         android:background="@drawable/btn_purple"
         android:text="Upload Nanti"
         android:textAllCaps="false"
-        android:textColor="@color/ColorPrimary"
+        android:textColor="@color/ColorWhite"
         android:textSize="@dimen/_15sdp" />
 </LinearLayout>
