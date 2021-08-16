@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,9 +34,16 @@ public class LoginAdminActvitiy extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginAdminActvitiy.this, HomeAdminActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                String username = etUsername.getText().toString();
+                String password = etPassword.getText().toString();
+                if (username.equals("JuraganDimsum") && password.equals("JuraganDimsum")) {
+                    Intent intent = new Intent(LoginAdminActvitiy.this, HomeAdminActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(LoginAdminActvitiy.this, "Username atau Password salah", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

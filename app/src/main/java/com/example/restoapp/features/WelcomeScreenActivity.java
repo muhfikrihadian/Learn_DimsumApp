@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.restoapp.R;
+import com.example.restoapp.helpers.DataHelper;
 
 public class WelcomeScreenActivity extends AppCompatActivity {
 
@@ -17,12 +18,14 @@ public class WelcomeScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
         Button btnStart = (Button) findViewById(R.id.btnStart);
+
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WelcomeScreenActivity.this, LoginActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                finish();
             }
         });
     }

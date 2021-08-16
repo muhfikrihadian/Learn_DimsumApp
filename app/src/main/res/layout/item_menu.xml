@@ -23,23 +23,39 @@
             android:src="@drawable/ic_dimsum" />
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/tvName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:fontFamily="@font/calibri"
-        android:text="Name"
-        android:textColor="@color/ColorWhite"
-        android:textSize="@dimen/_15sdp" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvHarga"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/calibri"
-        android:text="Description"
-        android:textColor="@color/ColorWhite"
-        android:textSize="@dimen/_12sdp" />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/calibri"
+            android:text="Name"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/tvHarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri"
+            android:text="Harga"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="right"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:tint="@color/ColorRed"
+            android:visibility="gone"/>
+    </LinearLayout>
 
 </LinearLayout>

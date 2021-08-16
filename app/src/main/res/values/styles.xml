@@ -6,5 +6,28 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/ColorWhite</item>
+    </style>
+    <style name="ETToolbarSearch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/_7sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_7sdp</item>
+        <item name="android:layout_marginRight">@dimen/_10sdp</item>
+        <item name="android:background">@drawable/bg_search</item>
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
+        <item name="android:paddingRight">@dimen/_5sdp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="BTNToolbarSearch">
+        <item name="android:layout_width">@dimen/_25sdp</item>
+        <item name="android:layout_height">@dimen/_25sdp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/_15sdp</item>
+        <item name="android:tint">@color/colorPrimary</item>
+    </style>
 
 </resources>

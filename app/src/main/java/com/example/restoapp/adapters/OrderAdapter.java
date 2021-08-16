@@ -19,7 +19,9 @@ import com.google.gson.Gson;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MenuViewHolder> {
     ArrayList<ModelOrder> dataList;
@@ -43,7 +45,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MenuViewHold
         holder.tvName.setText(dataList.get(position).getName());
         holder.tvQty.setText(String.valueOf(dataList.get(position).getQty()));
         holder.tvProduct.setText(dataList.get(position).getNama());
-        holder.tvTotal.setText("Rp. " + dataList.get(position).getTotal());
+        double harga = (double) dataList.get(position).getTotal();
+        holder.tvTotal.setText(formatRupiah(harga));
 
         holder.layoutItem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +61,12 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MenuViewHold
     @Override
     public int getItemCount() {
         return (dataList != null) ? dataList.size() : 0;
+    }
+
+    private String formatRupiah(Double number){
+        Locale localeID = new Locale("in", "ID");
+        NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
+        return formatRupiah.format(number);
     }
 
     public class MenuViewHolder extends RecyclerView.ViewHolder {

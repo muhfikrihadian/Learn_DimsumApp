@@ -17,6 +17,9 @@ import com.google.gson.Gson;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -66,9 +69,10 @@ public class DetailProductActivity extends AppCompatActivity {
                     ivImage.setImageResource(R.drawable.ic_breakfast);
                 }
             });
+            double doubleHarga = (double) data.getHarga();
             tvName.setText(data.getNama());
             tvDesc.setText(data.getDeskripsi());
-            tvPrice.setText("Rp. " + data.getHarga());
+            tvPrice.setText(formatRupiah(doubleHarga));
             harga = data.getHarga();
             qty = 1;
 
@@ -82,7 +86,9 @@ public class DetailProductActivity extends AppCompatActivity {
             btnOder.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ModelOrder modelOrder = new ModelOrder("", data.getNama(), data.getHarga(), qty, harga, data.getFoto());
+                    long unixTime = System.currentTimeMillis() / 1000L;
+                    String id = Long.toString(unixTime);
+                    ModelOrder modelOrder = new ModelOrder(id, data.getNama(), data.getHarga(), qty, harga, data.getFoto());
                     Intent intent = new Intent(DetailProductActivity.this, CheckoutActivity.class);
                     intent.putExtra("DataOrder", new Gson().toJson(modelOrder));
                     startActivity(intent);
@@ -101,7 +107,8 @@ public class DetailProductActivity extends AppCompatActivity {
                         Integer hargaOld = data.getHarga();
                         harga = hargaOld * qty;
                         tvQty.setText(String.valueOf(qty));
-                        tvPrice.setText("Rp. " + harga);
+                        double doubleHarga = (double) harga;
+                        tvPrice.setText(formatRupiah(doubleHarga));
                     }
                 }
             });
@@ -116,7 +123,8 @@ public class DetailProductActivity extends AppCompatActivity {
                         Integer hargaOld = data.getHarga();
                         harga = hargaOld * qty;
                         tvQty.setText(String.valueOf(qty));
-                        tvPrice.setText("Rp. " + harga);
+                        double doubleHarga = (double) harga;
+                        tvPrice.setText(formatRupiah(doubleHarga));
                     }
                 }
             });
@@ -124,5 +132,11 @@ public class DetailProductActivity extends AppCompatActivity {
             Toast.makeText(DetailProductActivity.this, "Maaf saat ini menu tidak tersedia untuk dipesan", Toast.LENGTH_SHORT).show();
             finish();
         }
+    }
+
+    private String formatRupiah(Double number){
+        Locale localeID = new Locale("in", "ID");
+        NumberFormat formatRupiah = NumberFormat.getCurrencyInstance(localeID);
+        return formatRupiah.format(number);
     }
 }

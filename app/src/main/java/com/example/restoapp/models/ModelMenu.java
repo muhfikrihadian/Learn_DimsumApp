@@ -4,6 +4,9 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class ModelMenu{
+    @SerializedName("id")
+    @Expose
+    private String id;
     @SerializedName("nama")
     @Expose
     private String nama;
@@ -20,12 +23,25 @@ public class ModelMenu{
     @Expose
     private String foto;
 
-    public ModelMenu(String nama, String deskripsi, String tipe, Integer harga, String foto){
+    public ModelMenu(){
+
+    }
+
+    public ModelMenu(String id, String nama, String deskripsi, String tipe, Integer harga, String foto){
+        this.id = id;
         this.nama = nama;
         this.deskripsi = deskripsi;
         this.tipe = tipe;
         this.harga = harga;
         this.foto = foto;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNama() {
