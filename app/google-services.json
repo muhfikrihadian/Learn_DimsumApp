@@ -1,41 +1,42 @@
 {
   "project_info": {
-    "project_number": "429685364326",
-    "project_id": "juragandimsum-1cddf",
-    "storage_bucket": "juragandimsum-1cddf.appspot.com"
+    "project_number": "1097560449964",
+    "firebase_url": "https://juragandimsum-f4260-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "juragandimsum-f4260",
+    "storage_bucket": "juragandimsum-f4260.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:429685364326:android:cd9b3bdfc49bb9033affa7",
+        "mobilesdk_app_id": "1:1097560449964:android:b3df1e014a57c384e41009",
         "android_client_info": {
-          "package_name": "com.example.restoapp"
+          "package_name": "com.adhityafairus.restoapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "429685364326-7f3teeomd30ddmb3gej88g2b7pfu99jg.apps.googleusercontent.com",
+          "client_id": "1097560449964-pmuij6u3marh326h34q4tlcmh7sim262.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.restoapp",
+            "package_name": "com.adhityafairus.restoapp",
             "certificate_hash": "c6a5d7bca6d99f3d4594c8546dee1c97621c1bf8"
           }
         },
         {
-          "client_id": "429685364326-gq4bpdehg597651nofg1tv8vvhbfkc17.apps.googleusercontent.com",
+          "client_id": "1097560449964-g9cm7acsj1hav5qdh1pggaf5uhql869u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDZKvgQAxKkKtKBJqfj4NR-dsReI5me7Ys"
+          "current_key": "AIzaSyBxNcmDAN4HylsElLaQS_8OCeqxv6Mtmyk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "429685364326-gq4bpdehg597651nofg1tv8vvhbfkc17.apps.googleusercontent.com",
+              "client_id": "1097560449964-g9cm7acsj1hav5qdh1pggaf5uhql869u.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
