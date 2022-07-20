@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_85sdp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp">
+
+            <ImageView
+                android:id="@+id/ivBtnBack"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="start"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Nama Produk"
+                android:textSize="@dimen/_15sdp" />
+
+            <EditText
+                android:id="@+id/etName"
+                style="@style/ETNormal" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Deskripsi"
+                android:textSize="@dimen/_15sdp" />
+
+            <EditText
+                android:id="@+id/etDeskripsi"
+                android:layout_height="@dimen/_100sdp"
+                android:maxLines="10"
+                android:gravity="top"
+                style="@style/ETNormal" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Tipe Produk"
+                android:textSize="@dimen/_15sdp" />
+
+            <Spinner
+                android:id="@+id/spTipe"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/bg_column"
+                android:entries="@array/TipeProduk" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Harga Produk"
+                android:textSize="@dimen/_15sdp" />
+
+            <EditText
+                android:id="@+id/etHarga"
+                style="@style/ETNormal"
+                android:inputType="number"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Foto Produk"
+                android:textSize="@dimen/_15sdp" />
+
+            <EditText
+                android:id="@+id/etFoto"
+                style="@style/ETNormal" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_20sdp"
+        android:gravity="bottom">
+        <Button
+            android:id="@+id/btnAdd"
+            style="@style/BTNPrimary"
+            android:text="Tambah" />
+    </RelativeLayout>
+</RelativeLayout>

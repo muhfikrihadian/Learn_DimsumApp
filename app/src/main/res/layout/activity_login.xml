@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWhite"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_login" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="E-mail"
+                android:textSize="@dimen/_15sdp" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                style="@style/ETNormal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Kata Sandi"
+                android:textSize="@dimen/_15sdp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/ETNormal"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_20sdp"
+        android:gravity="bottom">
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/BTNPrimary"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="Masuk" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/BTNPrimary"
+            android:layout_below="@id/btnLogin"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/btn_secondary"
+            android:text="Daftar"
+            android:textColor="@color/ColorPrimary" />
+
+        <TextView
+            android:id="@+id/btnAdmin"
+            android:layout_below="@id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/LoginAdmin"
+            android:textAlignment="center"
+            android:textSize="@dimen/_15sdp" />
+    </RelativeLayout>
+</RelativeLayout>

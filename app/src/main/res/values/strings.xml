@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RajaDimsum</string>
+    <string name="app_desc">Lagi ingin dimsum ?, Kamu membuka aplikasi yang tepat !</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="LoginAdmin"><u>Masuk Sebagai Admin</u></string>
+    <string name="LoginUser"><u>Masuk Sebagai User</u></string>
+    <string-array name="TipeProduk">
+        <item>Makanan</item>
+        <item>Minuman</item>
+    </string-array>
+</resources>
